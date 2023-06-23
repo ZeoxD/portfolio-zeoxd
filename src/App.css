@@ -1,3 +1,25 @@
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, rgb(228, 227, 236), rgb(238, 234, 241));
+}
+
+.App-container {
+  border: 5px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+.container-card {
+  height: 200vh;
+  width: 70vw;
+  margin-top: 5vh;
+  border-radius: 12px;
+  border: 1px solid black;
+  background: linear-gradient(to right, rgb(255, 250, 250), rgb(253, 247, 255));
+  box-shadow: 1px 1px 3px black;
+}
+
+.container:hover {
+  box-shadow: 1px 1px 5px black;
 }

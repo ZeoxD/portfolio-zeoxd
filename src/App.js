@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <ResponsiveAppBar />
       <div className="App-container">
-        <SimplePaper>Hello</SimplePaper>
+        <SimplePaper classComponent="container-card">Hello</SimplePaper>
       </div>
     </div>
   );

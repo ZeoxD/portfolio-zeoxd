@@ -2,12 +2,12 @@
 import Avatar from '@mui/material/Avatar';
 
 //styles & images 
-import "./About.css"
+import "./Skills.css"
 import DivyanshuRoom from "../assets/divyanshu_room.jpg"
 
-function About() {
+function Skills() {
     return(
-        <div className="about" id="About">
+        <div className="skills" id="Skills">
             <Avatar
             alt="Divyanshu"
             src={DivyanshuRoom}
@@ -17,4 +17,4 @@ function About() {
     )
 }
 
-export default About
+export default Skills

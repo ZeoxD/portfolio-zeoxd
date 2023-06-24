@@ -5,7 +5,7 @@ import './App.css';
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import SimplePaper from "./components/SimplePaper"
 import Home from "./pages/Home"
-import About from "./pages/About"
+import Skills from "./pages/Skills"
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <div className="App-container">
         <SimplePaper classComponent="container-card">
           <Home />
-          <About />
+          <Skills />
         </SimplePaper>
       </div>
     </div>

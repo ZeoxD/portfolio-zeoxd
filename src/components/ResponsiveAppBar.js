@@ -17,7 +17,6 @@ import Fade from '@mui/material/Fade';
 
 //material icons
 import HomeIcon from '@mui/icons-material/Home';
-import InfoIcon from '@mui/icons-material/Info';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import WorkIcon from '@mui/icons-material/Work';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
@@ -25,7 +24,7 @@ import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 //styles & images
 import DivyanshuLogo from "../assets/divyanshu_tripathi.jpg"
 
-const pages = [['Home', <HomeIcon />], ['About', <InfoIcon />], ['Skills', <LightbulbIcon />], ['Projects', <WorkIcon />], ['Contact', <AlternateEmailIcon />]];
+const pages = [['Home', <HomeIcon />], ['Skills', <LightbulbIcon />], ['Projects', <WorkIcon />], ['Contact', <AlternateEmailIcon />]];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);

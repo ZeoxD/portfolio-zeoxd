@@ -39,7 +39,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="sticky" color="transparent">
+    <AppBar position="sticky" color="transparent" sx={{backdropFilter: 'blur(96px) contrast(96%)'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{display: 'flex', flexGrow: 1}}>
           <Tooltip  title="Divyanshu Tripathi">
@@ -59,7 +59,7 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.1rem',
-              color: 'inherit',
+              color: 'black',
               textDecoration: 'none',
             }}
           >
@@ -70,6 +70,7 @@ function ResponsiveAppBar() {
             {pages.map((page) => (
               <Button
                 key={page}
+                href={`#${page[0]}`}
                 onClick={handleCloseNavMenu}
                 sx={{ mx: 0.5, py: 1, px: 0, bgcolor: 'rgb(226 219 233)', boxShadow: 1, color: 'black', minWidth: '56px' }}
               >
@@ -101,7 +102,7 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.1rem',
-              color: 'inherit',
+              color: 'black',
               textDecoration: 'none',
             }}
           >
@@ -138,7 +139,7 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu} sx={{px: 8, py: 2}}>
+                <MenuItem key={page} href="#Home" onClick={handleCloseNavMenu} sx={{px: 8, py: 2}}>
                   <Typography textAlign="center" >{page[0]}</Typography>
                 </MenuItem>
               ))}

@@ -26,4 +26,12 @@
 
 ::-webkit-scrollbar-track-piece {
   background-color: rgb(238, 234, 241);
+  color: rgb(214, 181, 255);
+}
+
+@media (max-width: 526px) {
+  .container-card {
+    margin: 5vh 0;
+    width: 90vw;
+  }
 }

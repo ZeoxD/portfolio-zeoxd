@@ -22,11 +22,12 @@ import WorkIcon from '@mui/icons-material/Work';
 import AlternateEmailIcon from '@mui/icons-material/AlternateEmail';
 
 //styles & images
-import DivyanshuLogo from "../assets/divyanshu_tripathi.jpg"
+import DivyanshuLogo from '../assets/divyanshu_tripathi.jpg'
+import { grey } from '@mui/material/colors';
 
 const pages = [['Home', <HomeIcon />], ['Skills', <LightbulbIcon />], ['Projects', <WorkIcon />], ['Contact', <AlternateEmailIcon />]];
 
-function ResponsiveAppBar() {
+function ResponsiveAppBar({prefersDarkMode}) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
@@ -38,7 +39,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="sticky" color="transparent" sx={{backdropFilter: 'blur(96px) contrast(96%)'}}>
+    <AppBar position="sticky" color="transparent" sx={{backdropFilter: 'blur(96px) contrast(96%)' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters sx={{display: 'flex', flexGrow: 1}}>
           <Tooltip  title="Divyanshu Tripathi">
@@ -58,8 +59,9 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.1rem',
-              color: 'black',
               textDecoration: 'none',
+              color: `${prefersDarkMode ? 'whitesmoke' : 'black'}`,
+              textShadow: `${prefersDarkMode ? '0 0 1px white': '0 0 1px #333'}`
             }}
           >
             DIVYANSHU TRIPATHI
@@ -68,10 +70,10 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page[0]}
                 href={`#${page[0]}`}
                 onClick={handleCloseNavMenu}
-                sx={{ mx: 0.5, py: 1, px: 0, bgcolor: 'rgb(226 219 233)', boxShadow: 1, color: 'black', minWidth: '56px' }}
+                sx={{ mx: 0.5, py: 1, px: 0, bgcolor: `${prefersDarkMode ? grey[800] : grey[200]}`, boxShadow: 1, color: `${prefersDarkMode ? grey[300] : '#333'}`, minWidth: '56px', '&:hover': {background: grey[700]} }}
               >
                 <Tooltip 
                 title={<Typography fontSize={14}>{page[0]}</Typography>}
@@ -101,8 +103,9 @@ function ResponsiveAppBar() {
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.1rem',
-              color: 'black',
               textDecoration: 'none',
+              color: `${prefersDarkMode ? 'whitesmoke' : 'black'}`,
+              textShadow: `${prefersDarkMode ? '0 0 1px white': '0 0 1px #333'}`
             }}
           >
             DIVYANSHU TRIPATHI
@@ -138,7 +141,7 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} href="#Home" onClick={handleCloseNavMenu} sx={{px: 8, py: 2}}>
+                <MenuItem key={page[0]} component="a" href={`#${page[0]}`} onClick={handleCloseNavMenu} sx={{px: 8, py: 2}}>
                   <Typography textAlign="center" >{page[0]}</Typography>
                 </MenuItem>
               ))}

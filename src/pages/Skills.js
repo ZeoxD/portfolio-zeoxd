@@ -3,15 +3,15 @@ import Avatar from '@mui/material/Avatar';
 
 //styles & images 
 import "./Skills.css"
-import DivyanshuRoom from "../assets/divyanshu_room.jpg"
+import DivyanshuRoom from "../assets/divyanshu_tripathi.jpg"
 
-function Skills() {
+function Skills({prefersDarkMode}) {
     return(
-        <div className="skills" id="Skills">
+        <div className={`skills ${prefersDarkMode ? "": "radial-bg"}`} id="Skills">
             <Avatar
             alt="Divyanshu"
             src={DivyanshuRoom}
-            sx={{ width: 240, height: 'auto', borderRadius: 5, boxShadow: 2 }}
+            sx={{ width: 240, height: 240, borderRadius: 20, boxShadow: 2 }}
             />
         </div>
     )

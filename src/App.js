@@ -35,7 +35,7 @@ function App() {
         <div className="App-container">
           <SimplePaper classComponent="container-card">
             <Home prefersDarkMode={prefersDarkMode}/>
-            <Skills />
+            <Skills prefersDarkMode={prefersDarkMode}/>
           </SimplePaper>
         </div>
       </div>

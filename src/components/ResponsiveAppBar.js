@@ -73,7 +73,16 @@ function ResponsiveAppBar({prefersDarkMode}) {
                 key={page[0]}
                 href={`#${page[0]}`}
                 onClick={handleCloseNavMenu}
-                sx={{ mx: 0.5, py: 1, px: 0, bgcolor: `${prefersDarkMode ? grey[800] : grey[200]}`, boxShadow: 1, color: `${prefersDarkMode ? grey[300] : '#333'}`, minWidth: '56px', '&:hover': {background: grey[700]} }}
+                sx={{ 
+                  mx: 0.5, 
+                  py: 1, 
+                  px: 0, 
+                  bgcolor: `${prefersDarkMode ? grey[800] : grey[200]}`, 
+                  boxShadow: 1, 
+                  color: `${prefersDarkMode ? grey[200] : grey[800]}`, 
+                  minWidth: '48px', 
+                  '&:hover': { background: prefersDarkMode ? grey[700] : grey[300] } 
+                }}
               >
                 <Tooltip 
                 title={<Typography fontSize={14}>{page[0]}</Typography>}
